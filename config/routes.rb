@@ -12,15 +12,16 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get '/uptruyen' =>'edittruyens#new'
-  resources :truyen
+  
   post 'truyens' =>'edittruyens#create'
   get '/themtheloai' =>'theloais#new'
   resources :theloais
   get '/edit' =>'edittruyens#list'
   get '/admin' =>'admin#show'
   patch '/truyen/:id' => 'edittruyens#update'
+  resources :truyen
   get 'edittruyen/:id/' =>'edittruyens#edit' ,as: :edittruyen
   resources :binhluan
   post '/binhluans' => 'binhluans#create'
-  
+
 end
