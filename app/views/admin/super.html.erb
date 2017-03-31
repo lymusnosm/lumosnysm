@@ -5,7 +5,7 @@
             <ul>
               <% @users.each do |t|%>
               <li>
-                <%= t.first_name%><%= t.last_name%><%= t.email%>
+                <%= t.first_name%><%= t.last_name%><%= t.email%><%= t.created_at.localtime%>
               </li>
               <%end%>
             </ul>
@@ -14,7 +14,7 @@
             <ul>
               <% @binhluans.each do |t|%>
               <li>
-                <%= t.content%><%= t.truyen_id%><%= t.user_id%>
+                <%= t.content%><%= t.truyen_id%><%= t.user_id%><%= t.created_at.localtime%>
               </li>
               <%end%>
             </ul>
