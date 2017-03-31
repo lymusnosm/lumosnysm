@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   resources :theloais
   get '/edit' =>'edittruyens#list'
   get '/admin' =>'admin#show'
+  get '/super' =>'admin#super'
   patch '/truyen/:id' => 'edittruyens#update'
   resources :truyen
   get 'edittruyen/:id/' =>'edittruyens#edit' ,as: :edittruyen
