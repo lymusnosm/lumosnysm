@@ -141,7 +141,7 @@
                   <br>
                   <br>
                 </p>
-                <p class="text-center"><%= @truyen.updated_at%></p>
+                <p class="text-center"><%= @truyen.updated_at.localtime%></p>
               </div>
             </div>
           </div>
@@ -210,7 +210,7 @@
                   <div class="panel-heading"></div>
                   <div class="panel-body">
                     <h3><%= t.content%></h3><br>
-                    <p class=text-right><%= t.created_at%><p>
+                    <p class=text-right><%= t.created_at.localtime%><p>
                       <p class=text-right><%= t.user_id%><p>
                   </div>
                 </div>
